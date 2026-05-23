@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustenta+ | Extensão Universitária</title>
+    <!-- Linha mágica 1: Carrega todo o visual (Tailwind CSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Linha mágica 2: Carrega todos os ícones lindos do projeto -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-white pt-16">
+
+    <!-- HEADER (MENU SUPERIOR) -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-green-600 p-2 rounded-lg text-white">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl font-semibold text-gray-900">Sustenta+</span>
+                </div>
+
+                <!-- Menu Desktop (Para telas maiores) -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-green-600 transition-colors">Início</a>
+                    <a href="#dicas-sustentaveis" class="text-gray-700 hover:text-green-600 transition-colors">Dicas Sustentáveis</a>
+                    <a href="#desafios" class="text-gray-700 hover:text-green-600 transition-colors">Desafios</a>
+                    <a href="#comunidade" class="text-gray-700 hover:text-green-600 transition-colors">Comunidade</a>
+                    <a href="#contato" class="text-gray-700 hover:text-green-600 transition-colors">Contato</a>
+                </nav>
+
+                <!-- Botão Menu Mobile -->
+                <button onclick="toggleMenu()" class="md:hidden p-2 text-gray-700 hover:text-green-600 focus:outline-none">
+                    <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Menu Mobile Aberto/Fechado -->
+            <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-100">
+                <a href="#inicio" onclick="toggleMenu()" class="block py-2 text-gray-700 hover:text-green-600 transition-colors">Início</a>
+                <a href="#dicas-sustentaveis" onclick="toggleMenu()" class="block py-2 text-gray-700 hover:text-green-600 transition-colors">Dicas Sustentáveis</a>
+                <a href="#desafios" onclick="toggleMenu()" class="block py-2 text-gray-700 hover:text-green-600 transition-colors">Desafios</a>
+                <a href="#comunidade" onclick="toggleMenu()" class="block py-2 text-gray-700 hover:text-green-600 transition-colors">Comunidade</a>
+                <a href="#contato" onclick="toggleMenu()" class="block py-2 text-gray-700 hover:text-green-600 transition-colors">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CORPO DO SITE (Vamos colando os próximos componentes aqui dentro) -->
+    <main>
+        <!-- O Hero vai entrar bem aqui -->
+    </main>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Lado Esquerdo: Textos e Botões -->
+                <div>
+                    <div class="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        Projeto Acadêmico 2026
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Sustenta+
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-4">
+                        Plataforma de educação ambiental e engajamento comunitário
+                    </p>
+                    <p class="text-lg text-gray-500 mb-8">
+                        Conectamos moradores, estudantes e famílias em ações práticas para reduzir o impacto ambiental no bairro.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#desafios" class="bg-green-600 hover:bg-green-700 text-white text-center px-8 py-4 rounded-xl transition-all">
+                            Explorar a Plataforma
+                        </a>
+                        <a href="#how-it-works" class="bg-gray-100 hover:bg-gray-200 text-gray-900 text-center px-8 py-4 rounded-xl transition-all">
+                            Como Funciona
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lado Direito: Cards de Dados -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Card 1 -->
+                        <div class="bg-green-50 p-6 rounded-2xl border-2 border-green-200">
+                            <div class="bg-green-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-white">
+                                <i data-lucide="trending-up" class="w-6 h-6"></i>
+                            </div>
+                            <div class="text-3xl font-bold text-gray-900 mb-1">87%</div>
+                            <p class="text-sm text-gray-600">dos brasileiros querem reciclar mais*</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-200 mt-8">
+                            <div class="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-white">
+                                <i data-lucide="users" class="w-6 h-6"></i>
+                            </div>
+                            <div class="text-3xl font-bold text-gray-900 mb-1">230L</div>
+                            <p class="text-sm text-gray-600">de água desperdiçada por dia/pessoa*</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-amber-50 p-6 rounded-2xl border-2 border-amber-200 col-span-2">
+                            <div class="bg-amber-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-white">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div class="text-3xl font-bold text-gray-900 mb-1">35%</div>
+                            <p class="text-sm text-gray-600">do lixo doméstico pode ser reciclado*</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-4">*Dados aproximados para fins educacionais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION (O QUE VOCÊ ENCONTRA AQUI) -->
+    <section id="dicas-sustentaveis" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    O que você encontra aqui
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl">
+                    Ferramentas e conteúdos desenvolvidos para facilitar a adoção de hábitos sustentáveis no dia a dia.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Guias Práticos -->
+                <div class="bg-white rounded-xl p-6 h-full border border-gray-200 hover:border-green-300 transition-all hover:shadow-md">
+                    <div class="text-green-600 mb-4">
+                        <i data-lucide="book-open" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Guias Práticos</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Tutoriais passo a passo sobre coleta seletiva, compostagem caseira e redução de resíduos.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Separação de materiais
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Pontos de coleta
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Destinação correta
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Calculadora de Consumo -->
+                <div class="bg-white rounded-xl p-6 h-full border border-gray-200 hover:border-green-300 transition-all hover:shadow-md">
+                    <div class="text-green-600 mb-4">
+                        <i data-lucide="droplet" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Calculadora de Consumo</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Estime seu gasto de água e energia e receba dicas personalizadas para economizar.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Análise mensal
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Comparativo
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Metas de redução
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Mapa Colaborativo -->
+                <div class="bg-white rounded-xl p-6 h-full border border-gray-200 hover:border-green-300 transition-all hover:shadow-md">
+                    <div class="text-green-600 mb-4">
+                        <i data-lucide="map-pin" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Mapa Colaborativo</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Localize ecopontos, cooperativas de reciclagem e problemas ambientais no seu bairro.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Ecopontos próximos
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Denúncias
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Locais verificados
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Desafios Mensais -->
+                <div class="bg-white rounded-xl p-6 h-full border border-gray-200 hover:border-green-300 transition-all hover:shadow-md">
+                    <div class="text-green-600 mb-4">
+                        <i data-lucide="trophy" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Desafios Mensais</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Participe de metas coletivas e acompanhe o impacto da sua comunidade.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Ranking local
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Recompensas
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Progresso em grupo
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 5: Biblioteca de Materiais -->
+                <div class="bg-white rounded-xl p-6 h-full border border-gray-200 hover:border-green-300 transition-all hover:shadow-md">
+                    <div class="text-green-600 mb-4">
+                        <i data-lucide="recycle" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Biblioteca de Materiais</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Consulte como descartar cada tipo de resíduo: eletrônicos, óleo, pilhas e mais.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>+ 50 categorias
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Busca rápida
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Vídeos explicativos
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 6: Horta Comunitária -->
+                <div class="bg-white rounded-xl p-6 h-full border border-gray-200 hover:border-green-300 transition-all hover:shadow-md">
+                    <div class="text-green-600 mb-4">
+                        <i data-lucide="sprout" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Horta Comunitária</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Encontre ou crie projetos de hortas urbanas e troca de sementes.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Calendário de plantio
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Grupos locais
+                        </li>
+                        <li class="text-sm text-gray-500 flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>Eventos gratuitos
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION (COMO FUNCIONA) -->
+    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Como funciona
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Em 4 passos simples você começa a fazer parte da mudança
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Passo 1 -->
+                <div class="relative">
+                    <div class="text-7xl font-bold text-green-100 absolute -top-4 -left-2">
+                        01
+                    </div>
+                    <div class="relative bg-white p-6 rounded-xl border-2 border-gray-100">
+                        <div class="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white">
+                            <i data-lucide="user-plus" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Cadastre-se grátis</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Crie sua conta informando seu bairro para receber conteúdo personalizado da sua região.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="relative">
+                    <div class="text-7xl font-bold text-green-100 absolute -top-4 -left-2">
+                        02
+                    </div>
+                    <div class="relative bg-white p-6 rounded-xl border-2 border-gray-100">
+                        <div class="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white">
+                            <i data-lucide="search" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Explore o conteúdo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Acesse guias, vídeos e o mapa de ecopontos próximos à sua localização.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="relative">
+                    <div class="text-7xl font-bold text-green-100 absolute -top-4 -left-2">
+                        03
+                    </div>
+                    <div class="relative bg-white p-6 rounded-xl border-2 border-gray-100">
+                        <div class="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Participe dos desafios</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Entre em metas mensais como "Semana sem descartáveis" e veja o ranking da comunidade.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="relative">
+                    <div class="text-7xl font-bold text-green-100 absolute -top-4 -left-2">
+                        04
+                    </div>
+                    <div class="relative bg-white p-6 rounded-xl border-2 border-gray-100">
+                        <div class="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white">
+                            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Acompanhe seu impacto</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Veja quanto lixo você evitou, litros de água economizados e CO₂ reduzido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY SECTION (MAPEAMENTO COLABORATIVO) -->
+    <section id="community" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 via-blue-50 to-green-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Mapeamento Colaborativo
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Ajude a identificar problemas ambientais no seu bairro. Seus relatos alimentam nosso mapa colaborativo e podem gerar ações concretas.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Coluna do Formulário -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <form onsubmit="event.preventDefault(); alert('Relato enviado! Obrigado por ajudar a mapear os problemas ambientais da sua região.'); this.reset();">
+                        <div class="mb-6">
+                            <label for="bairro" class="block font-semibold text-gray-900 mb-2">
+                                Seu bairro ou região
+                            </label>
+                            <input
+                                type="text"
+                                id="bairro"
+                                required
+                                placeholder="Ex: Centro, Vila Maria, Jardim das Flores..."
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none"
+                            />
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="tipo" class="block font-semibold text-gray-900 mb-2">
+                                Tipo de problema
+                            </label>
+                            <select
+                                id="tipo"
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none"
+                            >
+                                <option value="">Selecione...</option>
+                                <option value="lixo">Acúmulo de lixo</option>
+                                <option value="reciclagem">Falta de coleta seletiva</option>
+                                <option value="agua">Desperdício de água</option>
+                                <option value="esgoto">Esgoto irregular</option>
+                                <option value="verde">Falta de áreas verdes</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="problema" class="block font-semibold text-gray-900 mb-2">
+                                Descreva o problema
+                            </label>
+                            <textarea
+                                id="problema"
+                                required
+                                placeholder="Ex: Na Rua das Acácias não há lixeiras para coleta seletiva, o que dificulta a separação de materiais recicláveis..."
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all resize-none outline-none"
+                                rows="5"
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-lg transition-all flex items-center justify-center gap-2 font-medium"
+                        >
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            Enviar relato
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Coluna de Estatísticas e Infos -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl p-6 border-l-4 border-green-600">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-green-600 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Como funciona?</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Seus relatos são registrados no mapa colaborativo da plataforma, permitindo visualizar padrões e áreas críticas que precisam de atenção.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 border-l-4 border-blue-600">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="alert-circle" class="w-6 h-6 text-blue-600 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Problemas mais relatados</h3>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex justify-between">
+                                        <span>• Falta de coleta seletiva</span>
+                                        <span class="font-medium">42%</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>• Acúmulo de lixo</span>
+                                        <span class="font-medium">28%</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>• Falta de áreas verdes</span>
+                                        <span class="font-medium">18%</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>• Outros</span>
+                                        <span class="font-medium">12%</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6 text-white">
+                        <h3 class="font-semibold mb-2">Dados em tempo real</h3>
+                        <div class="grid grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <div class="text-2xl font-bold">1.247</div>
+                                <div class="text-green-100 text-sm">Relatos este mês</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold">86</div>
+                                <div class="text-green-100 text-sm">Bairros mapeados</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (RODAPÉ) -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-green-600 p-2 rounded-lg text-white">
+                            <i data-lucide="leaf" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-2xl font-semibold">Sustenta+</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Plataforma desenvolvida como projeto acadêmico para incentivar educação ambiental e engajamento comunitário em práticas sustentáveis.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i data-lucide="info" class="w-4 h-4"></i>
+                        <span>Trabalho universitário - 2026</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Navegação</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-green-400 transition-colors">Início</a></li>
+                        <li><a href="#dicas-sustentaveis" class="text-gray-400 hover:text-green-400 transition-colors">Funcionalidades</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-green-400 transition-colors">Como funciona</a></li>
+                        <li><a href="#community" class="text-gray-400 hover:text-green-400 transition-colors">Mapeamento</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Recursos</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-green-400 transition-colors flex items-center gap-1">
+                                <i data-lucide="file-text" class="w-4 h-4"></i>Documentação
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-green-400 transition-colors flex items-center gap-1">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>Referências
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-green-400 transition-colors flex items-center gap-1">
+                                <i data-lucide="mail" class="w-4 h-4"></i>Contato
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                    <p>&copy; 2026 Sustenta+ - Projeto Acadêmico</p>
+                    <p class="text-gray-500">Dados e estatísticas são simulações para fins educacionais</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </main>
+    <script>
+        // Inicializa os ícones do Lucide na tela
+        lucide.createIcons();
+
+        // Função simples para abrir e fechar o menu no celular
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons(); // Recarrega o ícone alterado (Menu ou X)
+        }
+    </script>
+</body>
+</html>
